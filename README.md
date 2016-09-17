@@ -1,7 +1,7 @@
 #Signing and distributing your Firefox add-on
 
 # 1.Signing your add-on
-Add-ons are signed by submitting them to AMO or using the API and passing either an automated or manual code review. 
+Add-ons are signed by [submitting them to AMO](https://addons.mozilla.org/en-US/developers/addon/submit/1) or using the API and passing either an automated or manual code review. 
 Note that you are not required to list or distribute your add-on through AMO. If you are distributing the add-on on your own, 
 you can choose the Unlisted option and AMO will only serve as the way to get your package signed.
 
