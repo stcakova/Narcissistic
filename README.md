@@ -6,10 +6,10 @@ Note that you are not required to list or distribute your add-on through AMO. If
 you can choose the Unlisted option and AMO will only serve as the way to get your package signed.
 
 # 2.Signing API
-If your add-on is an SDK add-on then use the jpm tool, the jpm sign command will work with the API to sign your add-on.
+If your add-on is an SDK add-on then use the [jpm](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm) tool, the [jpm sign](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_sign) command will work with the API to sign your add-on.
 
 # 3.Submitting to AMO
-New add-ons are uploaded to AMO through this submission form. The first step is to read through and accept the Developer Agreement.
+New add-ons are uploaded to AMO through [this](https://accounts.firefox.com/oauth/signin?scope=profile&state=277b095cdc2f3ac5942e54350bb0fbac5a9aef30f9802efa70ee4b22f87ea997%3AL2VuLVVTL2RldmVsb3BlcnMvYWRkb24vc3VibWl0LzE&redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthorize%2F&client_id=a4907de5fa9d78fc) submission form. The first step is to read through and accept the [Developer Agreement](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Agreement).
 Next, you'll need to decide if you want to distribute and list your add-on through AMO or not. 
 
 # 4.Listed add-ons
@@ -24,7 +24,7 @@ of hours to a number of weeks, depending on add-on complexity and other factors.
 needs to be reviewed. Updates are reviewed based on a diff, so they are quicker. Once your add-on passes review, the file is signed and published on AMO.
 Listed add-ons can be submitted for Preliminary Review or Full Review.  Preliminary Review consists of security and content
 checks, focused on the add-on's code. Full Review is a higher standard, and reviews include feature testing and performance checks. 
-Add-ons with Full Review have more prominence on the site and can be nominated to be featured. Add-ons that are nominated for Full Review and don't meet that standard may receive
+Add-ons with Full Review have more prominence on the site and can be nominated to be [featured](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Featured). Add-ons that are nominated for Full Review and don't meet that standard may receive
 Preliminary Review approval instead.
 
 # 5.Ownership
