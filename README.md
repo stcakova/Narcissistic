@@ -1,31 +1,48 @@
-#Signing and distributing your Firefox add-on
+#Publish your app to the Chrome Web Store
 
-# 1.Signing your add-on
-Add-ons are signed by [submitting them to AMO](https://addons.mozilla.org/en-US/developers/addon/submit/1) or using the API and passing either an automated or manual code review. 
-Note that you are not required to list or distribute your add-on through AMO. If you are distributing the add-on on your own, 
-you can choose the Unlisted option and AMO will only serve as the way to get your package signed.
+# 1. Create your app’s zip file
+  To upload your app, you need to create a ZIP file that contains at least one file: your app's     manifest.json. Set the initial version number in the manifest to a low value, such as 1.0.0 or lower if you intend to test the plugin before the actual release
 
-# 2.Signing API
-If your add-on is an SDK add-on then use the [jpm](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm) tool, the [jpm sign](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_sign) command will work with the API to sign your add-on.
+# 2. Create a developer account
+ If you want to publish a hosted app, you'll need to prove that your developer account owns the URLs that comprise the app. Visit the Google Webmaster Tools Help Center for information on [proving site ownership](https://support.google.com/webmasters/answer/34592?hl=en).
 
-# 3.Submitting to AMO
-New add-ons are uploaded to AMO through [this](https://accounts.firefox.com/oauth/signin?scope=profile&state=277b095cdc2f3ac5942e54350bb0fbac5a9aef30f9802efa70ee4b22f87ea997%3AL2VuLVVTL2RldmVsb3BlcnMvYWRkb24vc3VibWl0LzE&redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthorize%2F&client_id=a4907de5fa9d78fc) submission form. The first step is to read through and accept the [Developer Agreement](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Agreement).
-Next, you'll need to decide if you want to distribute and list your add-on through AMO or not. 
+# 3. Upload your app
+Go to the Chrome [Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard).
+Sign into the developer account.
+Click the Add new item button.
 
-# 4.Listed add-ons
-After accepting the Developer Agreement, you'll be asked if you want to list your add-on on AMO. Listing it should be the default option.
-Choose the platforms your add-on supports and upload your XPI. The file will be scanned by an automatic code validator which will show a number of warnings or errors
-depending on what it detects. Errors only show up for listed add-ons if there's something wrong in the package that needs to be fixed before it
-can be accepted. Warnings can vary in importance and severity; you should read through all of them carefully and see if there's anything
-you can fix in your add-on in order to avoid them showing up. This doesn't mean that you should obfuscate your code to bypass validation
-warnings. That practice can lead to your add-on being rejected and potentially blocklisted.
-Once you finish your listed add-on submission, it will be placed in a review queue, where it will be given a look. This can take between a couple
-of hours to a number of weeks, depending on add-on complexity and other factors. It also takes longer for the first submission, since all of the code 
-needs to be reviewed. Updates are reviewed based on a diff, so they are quicker. Once your add-on passes review, the file is signed and published on AMO.
-Listed add-ons can be submitted for Preliminary Review or Full Review.  Preliminary Review consists of security and content
-checks, focused on the add-on's code. Full Review is a higher standard, and reviews include feature testing and performance checks. 
-Add-ons with Full Review have more prominence on the site and can be nominated to be [featured](https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Featured). Add-ons that are nominated for Full Review and don't meet that standard may receive
-Preliminary Review approval instead.
+If you've never uploaded an item before, you need to accept the developer agreement before going to the next step.
 
-# 5.Ownership
-Add-ons can have multiple users with permission to update and manage the listing. Existing authors of an add-on can transfer ownership and add additional developers to an add-on's listing through the Developer Tools provided. No interaction with Mozilla representatives is necessary for a transfer of ownership.
+Click Choose file > your zip file > Upload. If your app's manifest and ZIP file are valid, you can edit your app on the next page.
+
+# 4. Pick a payments system
+
+If you aren't going to use Chrome Web Store Payments, you can delay or (for free apps) omit this step.
+
+# 5. Get the app ID
+
+The app ID appears in the URL of any dashboard or store page for your app. You’ll need the app ID if you want to use the Licensing API.
+
+For example, the URL "https://chrome.google.com/extensions/detail/aaaaaaaaaabbbbbbbbbbcccccccccc?hl=en" has the app ID “aaaaaaaaaabbbbbbbbbbcccccccccc.”
+
+
+#6. Get the OAuth token
+Go to the Chrome [Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard). Each hosted app that you've uploaded and that uses Chrome Web Store Payments has an OAuth setup link that lets you get OAuth information for that app.
+
+Note: The OAuth setup link is only shown for hosted apps. If you don't see the OAuth setup link for your hosted app, click the Edit link and use the Change pricing button to specify that your app uses Chrome Web Store Payments.
+Click the OAuth setup link. You get a page with OAuth information for the Licensing API. At the bottom of that page is the information you need to make Licensing API requests with your app, including the app ID but not the access token and token secret.
+Click the Generate new token button at the bottom of the page to generate the OAuth access token and token secret for your app.
+Record the token and token secret in a safe place. The dashboard will not show them to you again.
+
+# 7. Finish the app
+Now you can add any code that refers to the app ID or OAuth access token to complete your app. You can update your app as many times as you want, just remember to increase the version number each time.
+
+# 8. Pay the developer signup fee
+Before you publish your first app, you must pay a one-time $5 developer signup fee. A reminder in the dashboard will appear until you pay the fee.For more information, including troubleshooting tips, see the [Registration article](https://developer.chrome.com/webstore?visit_id=1-636097005655114165-1457965878&rd=2).
+
+# 9. Publish your app
+
+
+
+
+
